@@ -25,3 +25,39 @@ Senha para o próximo desafio: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
 Level 3 → Level 4 (logar como bandit3)
 
 The password for the next level is stored in a hidden file in the inhere directory.
+
+Senha para o próximo desafio : 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ (logar como bandit4)
+
+Level 4 → Level 5 (logar como bandit4)
+
+The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.
+
+Senha para o próximo desafio :
+4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw (logar como bandit5)
+
+Level 5 → Level 6 (logar como bandit5)
+
+The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:
+
+human-readable
+1033 bytes in size
+not executable
+
+find /home/bandit7 -type f -size 1033c ! -executable -exec ls -lh {} +
+
+
+Senha para o próximo desafio: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+
+Logar como bandit6
+
+Level 6 → Level 7 (logar como bandit6)
+
+The password for the next level is stored somewhere on the server and has all of the following properties:
+
+owned by user bandit7
+owned by group bandit6
+33 bytes in size
+
+Senha para o próximo desafio: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+
+
