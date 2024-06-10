@@ -1,7 +1,0 @@
-O desafio de nível 3 apenas pede para que você logue como bandit2 (pois você está indo do nível 2 para o 3) e que encontre um arquivo chamado "spaces in this filename", localizado no diretório home.
-
-executei um comando cd bandit2 e depois um comando ls e lá estava o arquivo. O objetivo deste desafio é lidar com arquivos com espaços nos nomes, devendo o nome do arquivo ser digitado da seguinte forma: 'spaces in this file name', exatamente com aspas simples, pois o shell interpreta espaços como parte do comando.
-
-Executando o comando cat neste arquivo encontra-se a seguinte senha:
-aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG 
-(que usarei para logar no próximo desafio, ou seja, como bandit 3, pois estou indo do nível 3 para o 4)
