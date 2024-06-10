@@ -1,0 +1,6 @@
+Bash é uma linguagem de scripts que roda num terminal de Linux. Os scripts do shell (no caso, o bash) são uma sequência de comandos dentro de um arquivo, combinados para realizar tarefas mais complexas que uma linha e são úteis ao se fazerem automações, como backups.
+
+Aqui aprenderei (no THM) sua sintaxe, variáveis, parâmetros, arrays e condicionais.
+
+Para mais informações consulte https://devhints.io/bash 
+
