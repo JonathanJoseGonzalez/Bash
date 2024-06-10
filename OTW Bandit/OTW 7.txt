@@ -1,0 +1,20 @@
+A senha para este desafio se encontra aramzenada em algum lugar no servidor (então não na pasta 'home', mas antes dela, no diretório raiz, que lista os seguintes diretórios: bin   drifter     home     lib32   lost+found  opt   run   srv  usr
+boot  etc         krypton  lib64   media       proc  sbin  sys  var
+dev   formulaone  lib      libx32  mnt         root  snap  tmp)
+
+Aqui podemos usar o find com as flags certas, que nos diz as propriedades do arquivo que contém a senha:
+- tem como dono o usuário bandit7
+- tem como dono o grupo bandit 6
+- possui tamanho de 33 bytes.
+
+executei um comando find -user bandit7 -group bandit6 -size 33cc e ainda assim a saída me deu vários diretórios com permissão negada.
+
+Assim executei o mesmo comando, mas com alguns diferenciais:
+ find / -user bandit7 -group bandit6 -size 33c 2>/dev/null -user bandit7 -group bandit6 -size 33cc
+
+- no comando find, a barra especifica o diretório a partir do qual a busca deve ser iniciada. No caso, o diretório raiz (pois não tem diretório especificado depois da barra)
+
+- o '2>/dev/null' é a parte do comando usada para redirecionar erros para o '/dev/null', que é um dispositivo especial de arquivos que descarta toda a entrada. É como um 'buraco negro' para dados.
+
+Desta forma, a senha para este desafio é:
+z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S

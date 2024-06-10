@@ -1,0 +1,5 @@
+o desafio é ainda no mesmo diretório do desafio anterior ('inhere'). E ele pede para que você ache a senha no único arquivo que pode ser lido de forma humana (human readable way)
+
+há 10 arquivos com nome '-file0x' indo do -file00 até o -file09. Executei um comando cat ./ em cada um deles até encontrar a senha no -file07:
+
+lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR

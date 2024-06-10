@@ -1,0 +1,20 @@
+O primeiro desafio (segundo, se você contar o '0'), pede para você logar no servidor bandit0@bandit.labs.overthewire.org (porta 2220) e encontrar uma senha para o próximo desafio dentro de um arquivo 'readme.txt'
+
+Para acessar o nível executei o seguinte comando: "ssh -p 2220 bandit1@bandit.labs.overthewire.org"
+
+no diretório ~$ (raíz) executei um comando 'cd home' que retornou que não existe (kkk)
+Teste os comandos 'ls -lh' e 'ls -la' que retornaram os seguintes arquivos:
+  - .
+  - ..
+  - .bash.logout
+  - .bashsrc
+  - .profile
+  - .readme (sem extensão, mas assumi que fosse txt)
+
+executei um comando 'ls ld' para verificar se havia mais algum arquivo, mas não tinha mais nada
+
+executei 'cat readme' que retornou a senha para o próximo desafio: NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
+
+esta senha acima serve para logar toda vez como bandit1 e continuar o jogo
+
+(Minha tradução parca do inglês me fez logar no bandit0 e no bandit1 mais de uma vez kkk, mas descobri que no bandit0 há mais pastas [cerca de 28 ou mais])

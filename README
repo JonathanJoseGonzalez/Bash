@@ -1,0 +1,58 @@
+Parâmetros Comuns em Comandos Internos do Shell
+
+test ou [ ]
+-e: Verifica se o arquivo ou diretório existe.
+-d: Verifica se o caminho é um diretório.
+-f: Verifica se é um arquivo regular.
+-r: Verifica se o arquivo ou diretório tem permissão de leitura.
+-w: Verifica se o arquivo ou diretório tem permissão de escrita.
+-x: Verifica se o arquivo ou diretório tem permissão de execução.
+-s: Verifica se o arquivo não está vazio.
+-L: Verifica se o arquivo é um link simbólico.
+-h: Também verifica se o arquivo é um link simbólico (equivalente a -L).
+
+echo
+-e: Habilita a interpretação de caracteres de escape.
+-n: Suprime a nova linha no final da saída.
+
+read
+-p: Exibe um prompt antes de ler a entrada.
+-r: Lê a entrada bruta, sem interpretação de caracteres de escape.
+-s: Oculta a entrada (útil para senhas).
+
+Parâmetros Comuns em Comandos Externos
+ls
+-l: Exibe a listagem em formato detalhado.
+-a: Inclui arquivos e diretórios ocultos na listagem.
+-h: Exibe tamanhos de arquivo em formato legível (e.g., KB, MB).
+-R: Lista diretórios recursivamente.
+-t: Ordena por data de modificação.
+
+grep
+-i: Ignora a diferença entre maiúsculas e minúsculas.
+-v: Inverte a correspondência (mostra linhas que não correspondem).
+-r: Pesquisa recursivamente em diretórios.
+-l: Lista apenas os nomes dos arquivos com correspondências.
+-c: Conta o número de correspondências em cada arquivo.
+
+find
+-name: Pesquisa arquivos por nome.
+-type: Pesquisa por tipo de arquivo (e.g., -type f para arquivos, -type d para diretórios).
+-size: Pesquisa arquivos por tamanho.
+-mtime: Pesquisa por data de modificação (e.g., -mtime -1 para arquivos modificados nas últimas 24 horas).
+-exec: Executa um comando em cada arquivo encontrado.
+
+tar
+-c: Cria um novo arquivo de tar.
+-x: Extrai arquivos de um tar.
+-z: Comprime/descomprime usando gzip.
+-v: Exibe os arquivos sendo processados.
+-f: Especifica o nome do arquivo de tar.
+
+chmod
+-R: Aplica permissões recursivamente a arquivos e diretórios.
+
+cp
+-r: Copia diretórios recursivamente.
+-p: Preserva atributos de arquivo (como timestamp e permissões).
+-u: Copia apenas quando o arquivo de origem é mais novo ou inexistente no destino.

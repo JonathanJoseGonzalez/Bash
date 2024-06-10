@@ -1,0 +1,10 @@
+logando aqui como bandit3, e usando a senha conseguida no desafio anterior, o desafio aqui no nível 3->4 é encontrar a senha num arquivo escondido chamado 'inhere'.
+
+o desafio começa no diretório ~$, no qual eu executei um comando ls e lá estava o diretório citado acima. 
+
+executei um comando file ./inhere, para ver de que tipo de arquivo se tratava. É um diretório. Acessei-o com o comando cd inhere
+
+ao executar o comando ls, nada é mostrado. O objetivo do desafio se encontra aqui: deve ser o usado o comando ls com a flag -la, para mostrar todos os arquivos ocultos. E lá estava o arquivo '.hidden'
+
+executei o comando cat .hidden e lá estava a senha para o próximo desafio: 
+2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
