@@ -21,3 +21,7 @@ The password for the next level is stored in a file called "spaces in this filen
 
 Senha para o próximo desafio: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
 (logar como bandit 3)
+
+Level 3 → Level 4 (logar como bandit3)
+
+The password for the next level is stored in a hidden file in the inhere directory.
