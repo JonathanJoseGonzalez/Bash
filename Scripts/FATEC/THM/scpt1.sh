@@ -14,4 +14,6 @@ echo $name
 # Para depurar o arquivo (debugging) é possível usar o comando -x, no arquivo todo ou em partes dele. Para depurar partes do arquivo bash, usa-se o comando set -x (para o começo) e set +x (para o final da parte que se quer depurar)
 
 #-------------------------------------
-# Parâmetros:
+# Parâmetros: existem várias formas, mas geralmente eles vêm com o prefixo '$' porque um parâmetro ainda é uma variável.
+
+name=$1 #diferente das outras linguagens, 
