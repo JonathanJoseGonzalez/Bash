@@ -16,4 +16,56 @@ echo $name
 #-------------------------------------
 # Parâmetros: existem várias formas, mas geralmente eles vêm com o prefixo '$' porque um parâmetro ainda é uma variável.
 
-name=$1 #diferente das outras linguagens, 
+name=$1 #diferente das outras linguagens, o bash não aceita espaços nas declarações de variáveis
+echo $name
+
+#se quiséssemos o segundo parâmetros em vez do primeiro, é só colocar um $2, então name=$2
+
+#arrays são usados para armazenar vários pedaços de informação em uma variável, que pode ser extraídos usando um índice. São escritas desta forma: var[posição_do_índice]
+
+#os arrays começam na posição 0 e não na posição 1. 
+transport=('car' 'train' 'bike' 'bus')
+echo "${transport[0]}" #que sintaxe de merda kkkkk
+echo "${transport[3]}"
+
+unset transport[0] #o comando unset deleta a posição do array desejada. Neste cado, o elemento de posição zero.
+transport[1] = 'trainride' #o comando 'trainride' altera o elemento do array. Então:
+echo "${transport}" # car trainride bike bus
+
+
+
+
+# if [alguma coisa] else
+#then
+#    alguma coisa
+#else
+#    outra coisa
+#fi
+
+
+count=10
+if [$count -eq 10] #aqui também poderia ser escrito como $count=10
+then
+    echo "true"
+else
+    echo "false"
+fi #fi neste caso é o contrário de 'if', que marca o fim do loop
+
+#operadores:
+# -ne (not equal)
+# -eq (equal)
+# -gt (greater than)
+# -lt (less than)
+# -ge (greater than or equal)
+# -le (less than or equal)
+# -and (and)
+# -or (or)
+
+value="guessme"
+guess=$1
+if ["$value"="$guess"]
+    then
+echo "São iguais"
+else
+echo "Não são iguais"
+fi
