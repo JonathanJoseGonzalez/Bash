@@ -72,4 +72,27 @@ The password for the next level is stored in the file data.txt and is the only l
 
 Senha para o próximo level: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 
-sort -k 1 data.txt | uniq -u
+No exemplo: 
+apple
+banana
+apple
+orange
+banana
+grape
+
+O comando sort data.txt colocará as linhas duplicadas uma em cima da outra e então, produzirá:
+apple
+apple
+banana
+banana
+grape
+orange
+
+E então uniq -u removerá as linhas duplicadas, deixando as linhas únicas: 
+grape
+orange
+
+Level 9 → Level 10 (logar como bandit9)
+
+Senha para o próximo nível: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+(achei, mas não da forma que deveria. Executei um 'strings data.txt | uniq -u) Para executar este comando E o comando sort, os comandos são separados por pipe. Então "strings data.txt | sort | uniq -u | grep '====='"
