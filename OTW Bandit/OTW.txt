@@ -104,6 +104,7 @@ The password is dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
 
 Level 11 → Level 12 (logar como bandit11)
 
+usar o comando tr (não entendi muito bem como usá-lo)
 Senha para o próximo nível: 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
 
 Level 12 -> Level 13 (logar como bandit12)
