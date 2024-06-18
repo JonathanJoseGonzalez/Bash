@@ -103,3 +103,7 @@ Executado o comando base64 -d (decode), segue-se a mensagem:
 The password is dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
 
 Level 11 → Level 12 (logar como bandit11)
+
+Senha para o próximo nível: 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+
+Level 12 -> Level 13 (logar como bandit12)
