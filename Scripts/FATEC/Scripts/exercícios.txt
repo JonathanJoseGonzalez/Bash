@@ -5,23 +5,21 @@ Exercícios de Administração de Usuários e Grupos
    - Crie três novos usuários (`user1`, `user2`, `user3`) com a senha "123456".
   sudo adduser user1
   sudo passwd user1
-  (digite a senha quando for solicitado)
   sudo adduser user2
   sudo passwd user2
-  (//)
   sudo adduser user3
   sudo passwd user3
-  (//)
 
 2. **Criar Grupo:**
    - Crie um novo grupo chamado `aula_so`.
-   sudo addgroup aula_so
+  sudo groupadd aula_so
 
 3. **Adicionar Usuários ao Grupo:**
    - Adicione `user1` e `user2` ao grupo `aula_so` e verifique a inserção.
-   sudo usermod -aG aula_so user1
-   sudo usermod -aG aula_so user2
+   sudo usermod -aG aula_so user 1
+   sudo usermod -aG aula_so user 2
    cat /etc/group | grep aula_so
+
 
 
 4. **Adicionar Usuário ao Grupo sudo:**
@@ -39,7 +37,7 @@ Exercícios de Administração de Usuários e Grupos
    - Logue como `user1` e verifique o diretório raiz, o caminho atual e o usuário logado.
    su user1
    cd /
-   ls -l
+   ls -lh
    pwd
    whoami
 
@@ -48,61 +46,59 @@ Exercícios de Administração de Usuários e Grupos
 7. **Criar Diretório e Alterar Permissões:**
    - Crie um novo diretório no diretório raiz chamado `novo_dir`.
    cd /
-   sudo mkdir novo_dir
+   mkdir novo_dir
 
 8. **Testar Permissões de Arquivo:**
    - Logue como `user2`, tente criar um arquivo de texto em `novo_dir` e observe as permissões.
    su user2
-   cd /
-   cd novo_dir
-   touch arquivodetexto.txt
+   touch arq1.txt
+   cat > arq1.txt
 
 ### Exercícios de Propriedade e Grupos
 
 9. **Alterar Propriedade e Grupo de um Diretório:**
    - Logue como `user1` e altere o proprietário e o grupo de `novo_dir`.
    su user1
-   sudo chown user2 /novo_dir
-   sudo chgroup aula_so /novo_dir
+   chown novo_dir user1
+   chgroup novo_dir aula_so
+
 
 10. **Alterar Permissões de Diretório:**
     - Mude as permissões de `novo_dir` para permitir escrita aos membros do grupo.
-    chmod 775 /novo_dir
-    ls -l /
+   sudo chmod 750 novo_dir
+   ls -l /
 
 11. **Criar Arquivo com Permissões Adequadas:**
     - Logue como `user2`, crie um arquivo de texto `arq1.txt` dentro de `novo_dir`.
     su user2
-    touch /novo_dir/arq1.txt
+    cd novo_dir
+    touch arq2.txt
 
 ### Exercícios de Acesso e Permissões
 
 12. **Testar Acesso e Edição de Arquivo:**
     - Logue como `user3`, tente criar e listar arquivos em `novo_dir`.
     su user3
-    cd /novo_dir
-    touch arq2.txt
-    ls -l /novo_dir
+    touch arq3.txt
+    ls -l/
 
 13. **Restringir Permissões de Diretório:**
     - Logue como `user1`, restrinja ainda mais as permissões de `novo_dir` e teste o acesso de `user3`.
     su user1
-    sudo chmod 774 /novo_dir
-    ls -l /
+    chmod 711 novo_dir
     su user3
-    cd /novo_dir
+    cd novo_dir
 
 
 14. **Verificar Permissões em Formato Octal:**
     - Logue como `user1` e mostre as permissões de `novo_dir` em formato octal.
     su user1
-    stat -c %a /novo_dir
-    // -c é um output personalizado e %a é o formato octal
+    stat -c %a novo_dir
 
 15. **Testar Exclusão de Arquivo por Outro Usuário:**
     - Logue como `user3` e tente apagar `arq1.txt`.
     su user3
-    cd /novo_dir
+    cd novo_dir
     rm arq1.txt
 
 ### Comandos Adicionais de Administração de Usuários
