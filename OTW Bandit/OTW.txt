@@ -118,3 +118,38 @@ O objetivo deste desafio é testar diversos métodos de descompressão:
 - para gzip a extensão deve ser .gz e o método de descompressão é "gunzip nome_do_arquivo.gz"
 - para bzip a extensão deve ser .bz e o método de descompressão é "bunzip2 nome_do_arquivo.bz"
 - para tar a extensão deve ser .tar e o método de descompressão é "tar -xf nome_do_arquivo.tar"
+
+Level 13 -> Level 14 (logar como bandit13)
+
+Aqui o desafio não te dá uma senha no final, mas sim uma chave SSH privada para você usar para logar no próximo desafio num host local.
+
+O único arquivo é o sshkey.private que não permite mudanças na sua extensão (gzip, bzip, tar). Indiferente de ver seu conteúdo ou não, o comando que permite que você logue no próximo desafio é o: ssh -i (flag que usa um arquivo como a própria chave) /tmp(a cópia do arquivo para o /tmp foi opcional)/sshkey.private -p 2220 bandit14@localhost
+
+A senha para o level 14 está armazenada em /etc/bandit_pass/bandit14 e só pode ser lida pelo bandit14
+
+Level 14 -> Level 15 (você já deve estar logado como bandit14)
+
+A senha para o próximo level pode ser recuperada enviando a senha do nível atual para a porta 30000 do localhost.
+
+Lendo a senha do desafio anterior: MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+
+Executando o seguinte comando temos a senha:  
+echo "MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS" | nc localhos
+t 30000
+Correct!
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+
+Level 15 -> Level 16 (ainda logado como bandit14)
+
+A senha para o próximo nível pode ser recuperada enviando a senha do desafio atual (do level 15) para a port 30001 no hostlocal usando a criptografia SSL
+
+# Conecte-se à porta 30001 usando openssl s_client com a opção -ign_eof
+openssl s_client -connect localhost:30001 -ign_eof
+
+# Digite a senha de bandit14
+<sua_senha_de_bandit14>
+
+Correct!
+kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+
+closed
