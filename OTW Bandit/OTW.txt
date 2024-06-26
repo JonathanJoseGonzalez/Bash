@@ -109,3 +109,12 @@ usar o comando tr: cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 Senha para o próximo nível: 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
 
 Level 12 -> Level 13 (logar como bandit12)
+
+o comando xxd reverte o hex dump para binário a sintaxe no caso seria "xxd -r compressed_data.txt compressed_data.bin"
+
+The password is FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+
+O objetivo deste desafio é testar diversos métodos de descompressão:
+- para gzip a extensão deve ser .gz e o método de descompressão é "gunzip nome_do_arquivo.gz"
+- para bzip a extensão deve ser .bz e o método de descompressão é "bunzip2 nome_do_arquivo.bz"
+- para tar a extensão deve ser .tar e o método de descompressão é "tar -xf nome_do_arquivo.tar"
