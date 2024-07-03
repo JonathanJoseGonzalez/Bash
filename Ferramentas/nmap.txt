@@ -1,0 +1,105 @@
+Aqui está uma lista dos switches mais usados do nmap, incluindo seus usos e exemplos:
+
+1. -sP (Ping Scan):
+   - Uso: Descobre hosts na rede sem fazer uma varredura de portas.
+   - Exemplo: nmap -sP 192.168.1.0/24
+
+2. -sS (SYN Scan):
+   - Uso: Realiza uma varredura TCP SYN, frequentemente chamado de "varredura furtiva".
+   - Exemplo: nmap -sS 192.168.1.1
+
+3. -sT (TCP Connect Scan):
+   - Uso: Realiza uma varredura TCP completa usando a chamada de sistema connect().
+   - Exemplo: nmap -sT 192.168.1.1
+
+4. -sU (UDP Scan):
+   - Uso: Realiza uma varredura de portas UDP.
+   - Exemplo: nmap -sU 192.168.1.1
+
+5. -sV (Service Version Detection):
+   - Uso: Detecta versões de serviços em execução nas portas abertas.
+   - Exemplo: nmap -sV 192.168.1.1
+
+6. -O (Operating System Detection):
+   - Uso: Detecta o sistema operacional do host.
+   - Exemplo: nmap -O 192.168.1.1
+
+7. -A (Aggressive Scan):
+   - Uso: Combina a detecção de SO, versão, script scanning e traceroute.
+   - Exemplo: nmap -A 192.168.1.1
+
+8. -p (Port Specification):
+   - Uso: Especifica as portas a serem escaneadas.
+   - Exemplo: nmap -p 22,80,443 192.168.1.1
+
+9. -p- (Scan All Ports):
+   - Uso: Escaneia todas as 65535 portas.
+   - Exemplo: nmap -p- 192.168.1.1
+
+10. -Pn (No Ping):
+    - Uso: Desabilita a varredura de ping, útil para hosts que não respondem a ping.
+    - Exemplo: nmap -Pn 192.168.1.1
+
+11. -T<0-5> (Timing Template):
+    - Uso: Ajusta a agressividade da varredura (0 = mais lento, 5 = mais rápido).
+    - Exemplo: nmap -T4 192.168.1.1
+
+12. -oN (Normal Output):
+    - Uso: Salva a saída em um arquivo de texto.
+    - Exemplo: nmap -oN scan_results.txt 192.168.1.1
+
+13. -oX (XML Output):
+    - Uso: Salva a saída em formato XML.
+    - Exemplo: nmap -oX scan_results.xml 192.168.1.1
+
+14. -oG (Grepable Output):
+    - Uso: Salva a saída em formato grepable.
+    - Exemplo: nmap -oG scan_results.gnmap 192.168.1.1
+
+15. --open:
+    - Uso: Mostra apenas portas abertas na saída.
+    - Exemplo: nmap --open 192.168.1.1
+
+16. --script:
+    - Uso: Executa scripts NSE (Nmap Scripting Engine).
+    - Exemplo: nmap --script vuln 192.168.1.1
+
+17. -sC:
+    - Uso: Executa scripts NSE padrão.
+    - Exemplo: nmap -sC 192.168.1.1
+
+18. -traceroute:
+    - Uso: Realiza traceroute para descobrir o caminho até o host alvo.
+    - Exemplo: nmap --traceroute 192.168.1.1
+
+19. -6 (IPv6 Scan):
+    - Uso: Realiza uma varredura em um alvo IPv6.
+    - Exemplo: nmap -6 2001:db8::1
+
+20. --reason:
+    - Uso: Mostra a razão por trás de cada estado de porta.
+    - Exemplo: nmap --reason 192.168.1.1
+
+21. -F (Fast Scan):
+    - Uso: Escaneia apenas as 100 portas mais comuns.
+    - Exemplo: nmap -F 192.168.1.1
+
+22. -v (Verbose):
+    - Uso: Aumenta a verbosidade da saída.
+    - Exemplo: nmap -v 192.168.1.1
+
+23. -vv (Very Verbose):
+    - Uso: Aumenta ainda mais a verbosidade da saída.
+    - Exemplo: nmap -vv 192.168.1.1
+
+24. -d (Debugging):
+    - Uso: Ativa o modo de depuração.
+    - Exemplo: nmap -d 192.168.1.1
+
+25. -n (No DNS Resolution):
+    - Uso: Desabilita a resolução de nomes DNS.
+    - Exemplo: nmap -n 192.168.1.1
+
+Resumo:
+
+Esta lista inclui 25 switches do nmap que são frequentemente usados para diversas tarefas de varredura de rede. Cada switch tem um propósito específico, desde a especificação de portas e detecção de sistemas operacionais até a execução de scripts e ajustes de tempo. Usando esses switches de forma combinada, é possível realizar varreduras de rede detalhadas e eficientes.
