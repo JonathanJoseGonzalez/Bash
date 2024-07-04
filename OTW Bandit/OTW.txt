@@ -147,9 +147,14 @@ A senha para o próximo nível pode ser recuperada enviando a senha do desafio a
 openssl s_client -connect localhost:30001 -ign_eof
 
 # Digite a senha de bandit14
-<sua_senha_de_bandit14>
+<sua_senha_de_bandit14> = 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+
 
 Correct!
 kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
 
 closed
+
+Level 16 -> Level 17
+
+openssl s_client -connect localhost:31790
